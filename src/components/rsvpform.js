@@ -14,10 +14,12 @@ export default class Contact extends React.Component {
   }
 
   handleChange = e => {
+    console.log(e.target.name, e.target.value)
     this.setState({ [e.target.name]: e.target.value });
   };
 
   handleSubmit = e => {
+    console.log("HANDLESUBMIT", this.state)
     e.preventDefault();
     const form = e.target;
     fetch("/", {
@@ -25,6 +27,9 @@ export default class Contact extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
+        "selectedOption": this.state.selectedOption
+        "name": this.state.name,
+        "email": this.state.email,
         ...this.state
       })
     })
