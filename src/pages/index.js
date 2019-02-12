@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
+import RSVP from "../components/rsvp.js"
 
 export default class Index extends React.Component {
   render() {
@@ -10,10 +11,9 @@ export default class Index extends React.Component {
         <p>
           This is an example site integrating Netlify’s form handling with Gatsby
         </p>
+        <RSVP />
         <ul>
           <li><Link to="/contact/">Basic contact form</Link></li>
-          <li><Link to="/file-upload/">Form with file upload</Link></li>
-          <li><Link to="/recaptcha/">Form with reCAPTCHA 2</Link></li>
         </ul>
       </div>
     );
