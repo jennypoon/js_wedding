@@ -27,7 +27,7 @@ export default class Contact extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
-        "selectedOption": this.state.selectedOption
+        "selectedOption": this.state.selectedOption,
         "name": this.state.name,
         "email": this.state.email,
         ...this.state
