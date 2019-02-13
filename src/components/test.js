@@ -78,7 +78,7 @@ export default class Contact extends React.Component {
             Can we expect you on September 2, 2019?
               <input
               type="radio"
-              name="rsvp"
+              name="rsvp_yes"
               onChange={this.handleRsvp}
               checked={this.state.rsvpComing}
                />{" "}
@@ -87,7 +87,7 @@ export default class Contact extends React.Component {
             <label>
               <input
                 type="radio"
-                name="rsvp"
+                name="rsvp_no"
                 onChange={this.handleRsvp}
                 checked={!this.state.rsvpComing}
               />{" "}
