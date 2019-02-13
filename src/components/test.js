@@ -10,12 +10,19 @@ function encode(data) {
 export default class Contact extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      rsvpComing: true
+    };
   }
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
+
+
+  handleRsvp = e => {
+    this.setState({ rsvpComing: !this.state.rsvpComing });
+  }
 
   handleSubmit = e => {
     e.preventDefault();
@@ -33,6 +40,7 @@ export default class Contact extends React.Component {
   };
 
   render() {
+    console.log("THIS STATE", this.state)
     return (
       <div>
         <h1>Contact</h1>
@@ -52,34 +60,52 @@ export default class Contact extends React.Component {
               <input name="bot-field" onChange={this.handleChange} />
             </label>
           </p>
+
           <p>
             <label>
-              Your name:<br />
+              First and Last Name:<br />
               <input type="text" name="name" onChange={this.handleChange} />
             </label>
           </p>
           <p>
             <label>
               Your email:<br />
-              <input type="email" name="email" onChange={this.handleChange} />
+              <input type="email" placeholder="email@email.com" name="email" onChange={this.handleChange} />
             </label>
           </p>
           <p>
             <label>
-              Coming?<br />
-              <input type="email" name="rsvp" onChange={this.handleChange} />
+            Can we expect you on September 2, 2019?
+              <input
+              type="radio"
+              name="rsvp"
+              onChange={this.handleRsvp}
+              checked={this.state.rsvpComing}
+               />{" "}
+              Yes{" "}
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="rsvp"
+                onChange={this.handleRsvp}
+                checked={!this.state.rsvpComing}
+              />{" "}
+              No{" "}
             </label>
           </p>
+          {this.state.rsvpComing ? (
+          <div>
           <p>
             <label>
               Number of Seats to Reserve<br />
-              <textarea name="seat_count" onChange={this.handleChange} />
+              <input name="seat_count" placeholder="#" onChange={this.handleChange} required/>
             </label>
           </p>
 
           <p>
             <label>
-              Names of Guests<br />
+              Guests Full Name<br />
               <textarea name="guest_names" onChange={this.handleChange} />
             </label>
           </p>
@@ -87,9 +113,10 @@ export default class Contact extends React.Component {
           <p>
             <label>
               Mailing Address:<br />
-              <textarea name="address" onChange={this.handleChange} />
+              <textarea name="address" placeholder="111 Abc Street, City, X1X 1X1" onChange={this.handleChange} />
             </label>
           </p>
+          </div>) : (<p>Sorry to hear you won't be attending :( </p>)}
           <p>
             <button type="submit">Send</button>
           </p>
