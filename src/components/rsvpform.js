@@ -72,7 +72,7 @@ export default class Contact extends React.Component {
         {this.state.selectedOption === "1" ? (
 
         <form
-          name="contact"
+          name="rsvp-form"
           className="rsvpForm"
           method="post"
           action="/thanks/"
@@ -138,7 +138,7 @@ export default class Contact extends React.Component {
             <div>
 
               <form
-                name="contact"
+                name="rsvp-form"
                 className="rsvpForm"
                 method="post"
                 action="/thanks/"
