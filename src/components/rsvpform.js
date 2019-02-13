@@ -19,7 +19,7 @@ export default class Contact extends React.Component {
   };
 
   handleSubmit = e => {
-    console.log("HANDLESUBMIT", this.state)
+    console.log("HANDLESUBMIT RSVP STATE", this.state)
     e.preventDefault();
     const form = e.target;
     fetch("/", {
@@ -27,9 +27,6 @@ export default class Contact extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
-        "selectedOption": this.state.selectedOption,
-        "name": this.state.name,
-        "email": this.state.email,
         ...this.state
       })
     })
