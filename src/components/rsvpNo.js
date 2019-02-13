@@ -36,7 +36,7 @@ export default class Contact extends React.Component {
     return (
       <div>
         <form
-          name="rsvp_no"
+          name="contact"
           method="post"
           action="/thanks/"
           data-netlify="true"
