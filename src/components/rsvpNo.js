@@ -17,7 +17,6 @@ export default class Contact extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-
   handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
@@ -36,7 +35,6 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div>
-      <p> Sorry to hear you won't be able to come </p>
         <form
           name="rsvp_no"
           method="post"
@@ -66,6 +64,7 @@ export default class Contact extends React.Component {
               <input type="email" placeholder="email@email.com" name="email" onChange={this.handleChange} required/>
             </label>
           </p>
+          <p> Sorry to hear you won't be able to come </p>
           <p>
             <button type="submit">Send</button>
           </p>
