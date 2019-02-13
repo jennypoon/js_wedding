@@ -106,7 +106,7 @@ export default class Contact extends React.Component {
           <p>
             <label>
               Guests Full Name<br />
-              <textarea name="guest_names" onChange={this.handleChange} />
+              <input name="plus_ones" onChange={this.handleChange} />
             </label>
           </p>
 
