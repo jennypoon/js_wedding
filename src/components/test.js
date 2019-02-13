@@ -37,7 +37,7 @@ export default class Contact extends React.Component {
       <div>
         <h1>Contact</h1>
         <form
-          name="contact"
+          name="test"
           method="post"
           action="/thanks/"
           data-netlify="true"
