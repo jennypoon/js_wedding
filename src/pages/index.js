@@ -3,12 +3,48 @@ import React from "react";
 // import Helmet from "react-helmet";
 import RSVP from "../components/rsvp.js"
 import Test from "../components/test.js"
+import No from "../components/test_no.js"
 
 export default class Index extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      rsvpComing: true
+    };
+  }
+
+  handleRsvp = e => {
+    this.setState({ rsvpComing: !this.state.rsvpComing });
+  }
+
+
   render() {
     return (
       <div>
-        <Test />
+       <h1>RSVP</h1>
+        <p>
+          <label>
+            Can we expect you on September 2, 2019?
+            <input
+            type="radio"
+            name="rsvp"
+            onChange={this.handleRsvp}
+            checked={this.state.rsvpComing}
+             />{" "}
+            Yes{" "}
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="rsvp"
+              onChange={this.handleRsvp}
+              checked={!this.state.rsvpComing}
+            />{" "}
+            No{" "}
+          </label>
+          </p>
+        {this.state.rsvpComing ? (<Test />) : <No /> }
       </div>
     );
   }

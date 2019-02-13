@@ -10,15 +10,12 @@ function encode(data) {
 export default class Contact extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      rsvpComing: true
-    };
+    this.state = {};
   }
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
-
 
 
   handleSubmit = e => {
@@ -37,10 +34,10 @@ export default class Contact extends React.Component {
   };
 
   render() {
-    console.log("THIS STATE", this.state)
+    console.log("THIS STATE - NO FORM", this.state)
     return (
       <div>
-
+      <p> Sorry to hear you won't be able to come </p>
         <form
           name="test"
           method="post"
@@ -68,26 +65,6 @@ export default class Contact extends React.Component {
             <label>
               Your email:<br />
               <input type="email" placeholder="email@email.com" name="email" onChange={this.handleChange} required/>
-            </label>
-          </p>
-          <p>
-            <label>
-              Number of Seats to Reserve<br />
-              <input type="number" name="seat_count" placeholder="#" onChange={this.handleChange} required/>
-            </label>
-          </p>
-
-          <p>
-            <label>
-              Guests Full Name<br />
-              <input type="text" name="plus_ones" onChange={this.handleChange} />
-            </label>
-          </p>
-
-          <p>
-            <label>
-              Mailing Address:<br />
-              <textarea type="text" name="address" placeholder="111 Abc Street, City, X1X 1X1" onChange={this.handleChange} />
             </label>
           </p>
           <p>
