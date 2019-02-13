@@ -43,7 +43,7 @@ export default class Index extends React.Component {
             No{" "}
           </label>
           </p>
-        {this.state.rsvpComing ? (<Test />) : <No /> }
+        {this.state.rsvpComing ? (<Yes />) : <No /> }
       </div>
     );
   }
