@@ -70,6 +70,13 @@ export default class Contact extends React.Component {
               <textarea name="changed" onChange={this.handleChange} />
             </label>
           </p>
+
+          <p>
+            <label>
+              Message:<br />
+              <textarea name="newThing" onChange={this.handleChange} />
+            </label>
+          </p>
           <p>
             <button type="submit">Send</button>
           </p>
