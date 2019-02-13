@@ -51,20 +51,19 @@ export default class Contact extends React.Component {
               <input name="bot-field" onChange={this.handleChange} />
             </label>
           </p>
-
           <p>
             <label>
-              First and Last Name:<br />
-              <input type="text" name="guest_name" onChange={this.handleChange} required/>
+              Your name:<br />
+              <input type="text" name="name" onChange={this.handleChange} />
             </label>
           </p>
           <p>
             <label>
               Your email:<br />
-              <input type="email" placeholder="email@email.com" name="email" onChange={this.handleChange} required/>
+              <input type="email" name="email" onChange={this.handleChange} />
             </label>
           </p>
-          <p> Sorry to hear you won't be able to come </p>
+          <p>Sorry to hear you can't make it</p>
           <p>
             <button type="submit">Send</button>
           </p>
