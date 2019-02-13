@@ -1,9 +1,8 @@
 import React from "react";
 // import Link from "gatsby-link";
 // import Helmet from "react-helmet";
-import RSVP from "../components/rsvp.js"
-import Test from "../components/test.js"
-import No from "../components/test_no.js"
+import Yes from "../components/rsvpYes.js"
+import No from "../components/rsvpNo.js"
 
 export default class Index extends React.Component {
 

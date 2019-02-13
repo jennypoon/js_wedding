@@ -17,6 +17,7 @@ export default class Contact extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+
   handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
@@ -35,9 +36,9 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div>
-        <h1>Contact</h1>
+
         <form
-          name="contact"
+          name="test"
           method="post"
           action="/thanks/"
           data-netlify="true"
@@ -52,29 +53,37 @@ export default class Contact extends React.Component {
               <input name="bot-field" onChange={this.handleChange} />
             </label>
           </p>
+
           <p>
             <label>
-              Your name:<br />
-              <input type="text" name="name" onChange={this.handleChange} />
+              First and Last Name:<br />
+              <input type="text" name="guest_name" onChange={this.handleChange} required/>
             </label>
           </p>
           <p>
             <label>
               Your email:<br />
-              <input type="email" name="email" onChange={this.handleChange} />
+              <input type="email" placeholder="email@email.com" name="email" onChange={this.handleChange} required/>
             </label>
           </p>
           <p>
             <label>
-              Message:<br />
-              <textarea name="changed" onChange={this.handleChange} />
+              Number of Seats to Reserve<br />
+              <input type="number" name="seat_count" placeholder="#" onChange={this.handleChange} required/>
             </label>
           </p>
 
           <p>
             <label>
-              Message:<br />
-              <textarea name="newThing" onChange={this.handleChange} />
+              Guests Full Name<br />
+              <input type="text" name="plus_ones" onChange={this.handleChange} />
+            </label>
+          </p>
+
+          <p>
+            <label>
+              Mailing Address:<br />
+              <textarea type="text" name="address" placeholder="111 Abc Street, City, X1X 1X1" onChange={this.handleChange} />
             </label>
           </p>
           <p>
