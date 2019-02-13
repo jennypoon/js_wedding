@@ -99,21 +99,21 @@ export default class Contact extends React.Component {
           <p>
             <label>
               Number of Seats to Reserve<br />
-              <input name="seat_count" placeholder="#" onChange={this.handleChange} required/>
+              <input type="number" name="seat_count" placeholder="#" onChange={this.handleChange} required/>
             </label>
           </p>
 
           <p>
             <label>
               Guests Full Name<br />
-              <input name="plus_ones" onChange={this.handleChange} />
+              <input type="text" name="plus_ones" onChange={this.handleChange} />
             </label>
           </p>
 
           <p>
             <label>
               Mailing Address:<br />
-              <textarea name="address" placeholder="111 Abc Street, City, X1X 1X1" onChange={this.handleChange} />
+              <textarea type="text" name="address" placeholder="111 Abc Street, City, X1X 1X1" onChange={this.handleChange} />
             </label>
           </p>
           </div>) : (<p>Sorry to hear you won't be attending :( </p>)}
