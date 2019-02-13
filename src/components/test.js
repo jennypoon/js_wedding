@@ -43,7 +43,7 @@ export default class Contact extends React.Component {
     console.log("THIS STATE", this.state)
     return (
       <div>
-        <h1>Contact</h1>
+        <h1>RSVP</h1>
         <form
           name="test"
           method="post"
@@ -64,7 +64,7 @@ export default class Contact extends React.Component {
           <p>
             <label>
               First and Last Name:<br />
-              <input type="text" name="name" onChange={this.handleChange} />
+              <input type="text" name="guest_name" onChange={this.handleChange} />
             </label>
           </p>
           <p>
@@ -78,7 +78,7 @@ export default class Contact extends React.Component {
             Can we expect you on September 2, 2019?
               <input
               type="radio"
-              name="rsvp_yes"
+              name="rsvp"
               onChange={this.handleRsvp}
               checked={this.state.rsvpComing}
                />{" "}
@@ -87,7 +87,7 @@ export default class Contact extends React.Component {
             <label>
               <input
                 type="radio"
-                name="rsvp_no"
+                name="rsvp"
                 onChange={this.handleRsvp}
                 checked={!this.state.rsvpComing}
               />{" "}
